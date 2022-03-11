@@ -9,11 +9,11 @@ if (user && password) {
   url = `mongodb://${user}:${password}@${host}:${port}` // prd 环境
 }
 
-mongoose.set('useCreateIndex', true)
-mongoose.set('useFindAndModify', false)
+// mongoose.set('useCreateIndex', true)
+// mongoose.set('useFindAndModify', false)
 
 // 开始连接（ 使用用户名和密码时，需要 `?authSource=admin` ）
-mongoose.connect(`${url}/${dbName}?authSource=admin`, {
+mongoose.connect(`${url}/${dbName}`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })

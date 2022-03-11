@@ -3,22 +3,22 @@ module.exports = {
   mysqlConf: {
     host: '121.36.199.250',
     user: 'root',
-    password: 'Admin@123',
-    port: '3209',
+    password: '123',
+    port: '3306',
     database: 'lego_course',
   },
 
   // mongodb 连接配置
   mongodbConf: {
-    host: 'localhost',
+    host: '121.36.199.250',
     port: '27017',
-    dbName: 'lego_course',
+    dbName: 'newdatabase',
   },
 
   // redis 连接配置
   redisConf: {
     port: '6379',
     host: '121.36.199.250',
-    password: 'abc123',
+    // password: 'abc123',
   },
 }
