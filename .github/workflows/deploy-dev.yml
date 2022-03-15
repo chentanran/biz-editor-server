@@ -27,10 +27,10 @@ jobs:
                   mkdir -p ~/.ssh/;
                   echo "${{secrets.WFP_ID_RSA}}" > ~/.ssh/id_rsa; # secret 在这里配置 /settings/secrets
                   chmod 600 ~/.ssh/id_rsa;
-                  ssh-keyscan "121.36.199.250:22" >> ~/.ssh/known_hosts;
+                  ssh-keyscan "121.36.199.250:22 -p 60022" >> ~/.ssh/known_hosts;
             - name: deploy # 部署
               run: |
-                  ssh root@121.36.199.250:22 "
+                  ssh root@121.36.199.250 -p 60022 "
                     # 【注意】用 work 账号登录，手动创建 /home/work/imooc-lego 目录
                     # 然后 git clone https://username:password@github.com/.git -b dev （私有仓库，使用 github 用户名和密码）
                     # 记得删除 origin ，否则会暴露 github 密码
