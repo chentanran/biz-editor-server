@@ -22,6 +22,8 @@ jobs:
 
         steps:
             - uses: actions/checkout@v2
+            - name: delete ssh key # 删除 ssh key
+              run: rm -rf ~/.ssh/id_rsa
             - name: set ssh key # 临时设置 ssh key
               run: |
                   mkdir -p ~/.ssh/;
