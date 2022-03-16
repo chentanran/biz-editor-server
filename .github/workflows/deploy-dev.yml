@@ -26,7 +26,7 @@ jobs:
               run: |
                   mkdir -p ~/.ssh/;
                   echo "${{secrets.WFP_ID_RSA}}" > ~/.ssh/id_rsa.pub; # secret 在这里配置 /settings/secrets
-                  chmod 600 ~/.ssh/id_rsa.pub;
+                  chmod 600 ~/.ssh/id_rsa;
                   ssh-keyscan -p 60022 121.36.199.250 >> ~/.ssh/known_hosts;
             - name: deploy # 部署
               run: |
