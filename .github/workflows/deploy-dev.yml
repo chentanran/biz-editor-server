@@ -36,7 +36,7 @@ jobs:
                     # 记得删除 origin ，否则会暴露 github 密码
 
                     cd /app;
-                    git remote add origin git@github.com:chentanran/biz-editor-server.git;
+                    git remote add origin https://github.com/chentanran/biz-editor-server.git;
                     git checkout dev;
                     git pull origin dev; # 重新下载最新代码
                     git remote remove origin; # 删除 origin ，否则会暴露 github 密码
