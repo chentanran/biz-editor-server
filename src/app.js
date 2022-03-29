@@ -7,6 +7,7 @@ const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
 const jwt = require('./middlewares/jwt')
+const cors = require('./middlewares/cors')
 
 const index = require('./routes/index')
 const users = require('./routes/users')
@@ -14,14 +15,13 @@ const users = require('./routes/users')
 // error handler
 onerror(app)
 
+// 支持跨域
+app.use(cors)
+
 app.use(jwt)
 
 // middlewares
-app.use(
-  bodyparser({
-    enableTypes: ['json', 'form', 'text'],
-  })
-)
+app.use(bodyparser())
 app.use(json())
 app.use(logger())
 app.use(require('koa-static')(`${__dirname}/public`))

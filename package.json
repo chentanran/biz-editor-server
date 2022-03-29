@@ -13,6 +13,7 @@
     "lint-fix": "eslint --fix \"src/**/*.{js,ts}\""
   },
   "dependencies": {
+    "ajv": "^8.11.0",
     "axios": "^0.26.0",
     "cross-env": "^7.0.3",
     "debug": "^4.1.1",
@@ -27,6 +28,8 @@
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "koa-views": "^6.2.0",
+    "koa2-cors": "^2.0.6",
+    "lodash": "^4.17.21",
     "mongoose": "^6.2.4",
     "mysql2": "^2.3.3",
     "pug": "^2.0.3",
@@ -35,7 +38,9 @@
     "sequelize": "^6.17.0",
     "simple-git": "^3.2.6",
     "supertest": "^6.2.2",
-    "util": "^0.12.4"
+    "tencentcloud-sdk-nodejs": "^4.0.314",
+    "util": "^0.12.4",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "commitlint": "^11.0.0",

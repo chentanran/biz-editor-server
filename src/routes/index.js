@@ -6,6 +6,7 @@ const { WorkModel } = require('../models/WorkModel')
 const { cacheGet, cacheSet } = require('../cache/index')
 
 router.get('/api/db-check', async (ctx, next) => {
+  console.log(ctx, 'ctx')
   // 测试 mysql 连接
   const mysqlRes = await testMysqlConn()
 
